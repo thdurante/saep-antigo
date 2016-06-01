@@ -1,0 +1,30 @@
+{
+  "guid": "6295e9d6-5ba8-41de-b231-7f96c1b3abde :string",
+  "anoBase": 2001,
+  "relatos": [
+    {
+      "tipo": {
+        "codigo": ":string",
+        "nome": "oneOf(atividade, produto) :string",
+        "descricao": ":string",
+        "atributos": [
+          {
+            "nome": ":string",
+            "tipo": "oneOf(LOGICO, REAL, STRING) :TipoPrimitivo",
+            "descricao": ":string"
+          }
+        ]
+      },
+      "valorPorNome": {
+        "atributo": {
+          "nome": ":string",
+          "tipo": "oneOf(LOGICO, REAL, STRING) :TipoPrimitivo",
+          "descricao": ":string"
+        },
+        "real": 12.12,
+        "logico": true,
+        "string": "string"
+      }
+    }
+  ]
+}
