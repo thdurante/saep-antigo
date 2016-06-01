@@ -2,6 +2,7 @@ group 'br.com.inf'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.5
 
@@ -14,3 +15,12 @@ dependencies {
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     compile group: 'com.fasterxml', name: 'jackson-module-json-org', version: '0.9.1'
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+check.dependsOn jacocoTestReport
