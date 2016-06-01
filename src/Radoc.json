@@ -1,5 +1,5 @@
 {
-  "guid": "6295e9d6-5ba8-41de-b231-7f96c1b3abde :string",
+  "guid": "6295e9d6-5ba8-41de-b231-7f96c1b3abde",
   "anoBase": 2001,
   "relatos": [
     {
@@ -10,7 +10,7 @@
         "atributos": [
           {
             "nome": ":string",
-            "tipo": "oneOf(LOGICO, REAL, STRING) :TipoPrimitivo",
+            "tipo": "LOGICO",
             "descricao": ":string"
           }
         ]
@@ -18,7 +18,7 @@
       "valorPorNome": {
         "atributo": {
           "nome": ":string",
-          "tipo": "oneOf(LOGICO, REAL, STRING) :TipoPrimitivo",
+          "tipo": "REAL",
           "descricao": ":string"
         },
         "real": 12.12,
