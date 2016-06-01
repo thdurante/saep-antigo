@@ -12,5 +12,5 @@ Documentos disponíveis:
 [build-badge]: https://travis-ci.com/thdurante/saep.svg?token=vXLpgias2ygiGmTRzctb&branch=serializando_objetos_modelo
 [build]: https://travis-ci.com/thdurante/saep
 
-[code-cov]: https://codecov.io/gh/thdurante/saep/branch/master/graph/badge.svg?token=SslMW2osOR
+[code-cov]: https://codecov.io/gh/thdurante/saep/branch/serializando_objetos_modelo/graph/badge.svg?token=SslMW2osOR
 [coverage]: https://codecov.io/gh/thdurante/saep
