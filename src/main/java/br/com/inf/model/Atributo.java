@@ -8,6 +8,12 @@ public class Atributo {
     private TipoPrimitivo tipo;
     private String descricao;
 
+    public Atributo(String nome, String descricao, TipoPrimitivo tipo) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.tipo = tipo;
+    }
+
     public String getNome() {
         return nome;
     }

@@ -11,6 +11,20 @@ public class Tipo {
     private String descricao;
     private Set<Atributo> atributos;
 
+    /**
+     * Cria tipo definido pelo conjunto identificadaPor atributos.
+     * @param nome O nome pelo qual o tipo é conhecido.
+     * @param codigo Código único que identifica o tipo.
+     * @param descricao Informação adicional sobre o tipo.
+     * @param atributos Atributos que caracterizam o tipo.
+     */
+    public Tipo(String nome, String codigo, String descricao, Set<Atributo> atributos) {
+        this.nome = nome;
+        this.codigo = codigo;
+        this.descricao = descricao;
+        this.atributos = atributos;
+    }
+
     public String getCodigo() {
         return codigo;
     }
