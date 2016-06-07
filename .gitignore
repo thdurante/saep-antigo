@@ -15,3 +15,6 @@
 .gradle/
 build/
 bin/
+
+# Log
+log/
