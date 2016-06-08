@@ -10,6 +10,10 @@ public class Radoc {
     private int anoBase;
     private List<Relato> relatos;
 
+    public Radoc () {
+
+    }
+
     /**
      * Cria um relatório identificadaPor relatos.
      *

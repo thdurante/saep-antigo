@@ -11,6 +11,10 @@ public class Tipo {
     private String descricao;
     private Set<Atributo> atributos;
 
+    public Tipo () {
+
+    }
+
     /**
      * Cria tipo definido pelo conjunto identificadaPor atributos.
      * @param nome O nome pelo qual o tipo é conhecido.
