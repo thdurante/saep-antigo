@@ -1,10 +1,7 @@
 package br.com.inf.model;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown=true)
 public class Radoc {
     private String guid;
     private int anoBase;

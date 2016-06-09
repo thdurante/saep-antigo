@@ -1,8 +1,5 @@
 package br.com.inf.model;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown=true)
 public class Atributo {
     private String nome;
     private TipoPrimitivo tipo;

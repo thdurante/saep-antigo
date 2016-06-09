@@ -1,10 +1,7 @@
 package br.com.inf.model;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
 import java.util.Set;
 
-@JsonIgnoreProperties(ignoreUnknown=true)
 public class Tipo {
     private String codigo;
     private String nome;

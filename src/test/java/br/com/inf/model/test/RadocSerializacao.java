@@ -2,7 +2,7 @@ package br.com.inf.model.test;
 
 import br.com.inf.model.Radoc;
 import br.com.inf.utils.Log4jTestWatcher;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Rule;
