@@ -1,15 +1,29 @@
+/*
+ * Copyright (c) 2016. Fábrica de Software - Instituto de Informática (UFG)
+ * Creative Commons Attribution 4.0 International License.
+ */
+
 package br.com.inf.model;
 
+import java.util.Date;
 import java.util.List;
 
+/**
+ * Relatório contendo relatos associados a um docente.
+ */
 public class Radoc {
+
+    /**
+     * Identificador único do relatório.
+     */
     private String guid;
+
+    /**
+     * Ano base do relatório.
+     */
     private int anoBase;
+
     private List<Relato> relatos;
-
-    public Radoc () {
-
-    }
 
     /**
      * Cria um relatório identificadaPor relatos.
@@ -25,27 +39,27 @@ public class Radoc {
         this.relatos = relatos;
     }
 
-    public String getGuid() {
-        return guid;
-    }
+    /*
+    * Getters and setters
+    */
 
     public void setGuid(String guid) {
         this.guid = guid;
-    }
-
-    public int getAnoBase() {
-        return anoBase;
     }
 
     public void setAnoBase(int anoBase) {
         this.anoBase = anoBase;
     }
 
-    public List<Relato> getRelatos() {
-        return relatos;
+    public String getGuid() {
+        return guid;
     }
 
-    public void setRelatos(List<Relato> relatos) {
-        this.relatos = relatos;
+    public int getAnoBase() {
+        return anoBase;
+    }
+
+    public List<Relato> getRelatos() {
+        return relatos;
     }
 }

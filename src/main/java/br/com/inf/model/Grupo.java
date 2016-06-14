@@ -1,8 +1,19 @@
+/*
+ * Copyright (c) 2016. Fábrica de Software - Instituto de Informática (UFG)
+ * Creative Commons Attribution 4.0 International License.
+ */
+
 package br.com.inf.model;
 
 import java.util.Set;
 
-public class Grupo extends Tipo{
+/**
+ * Tipos de relato podem estar classificados em
+ * um grupo. Por exemplo, "aulas presenciais na graduação"
+ * e "aulas do ensino a distância na graduação" são
+ * tipos do grupo "graduação".
+ */
+public class Grupo extends Tipo {
     private Set<Tipo> tipos;
 
     /**
