@@ -3,7 +3,7 @@
  * Creative Commons Attribution 4.0 International License.
  */
 
-package br.com.inf.model.interfaces;
+package br.com.inf.model;
 
 /**
  * Marcador para instância que pode ser alterada
