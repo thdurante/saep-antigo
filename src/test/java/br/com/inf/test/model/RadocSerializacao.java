@@ -189,7 +189,6 @@ public class RadocSerializacao {
         }
     }
 
-    // TODO: tratar o caso de serialização do objeto Radoc para JSON
     @Test
     public void radocToJson () throws IOException {
         System.out.println(gson.toJson(radoc) + "\n");
