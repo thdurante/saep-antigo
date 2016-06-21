@@ -1,0 +1,78 @@
+{
+  "guid": "c3223d17-135f-473e-b01f-2f37705d3945",
+  "anoBase": 2016,
+  "relatos": [
+    {
+      "tipo": {
+        "codigo": "RPA",
+        "nome": "RELATÓRIO DE PUBLICAÇÕES ACADÊMICAS",
+        "descricao": "Descreve todas as publicações acadêmicas de um docente em um dado período",
+        "atributos": [
+          {
+            "nome": "Título",
+            "tipo": "STRING",
+            "descricao": "Título da publicação acadêmica"
+          },
+          {
+            "nome": "Autor",
+            "tipo": "STRING",
+            "descricao": "Autor da publicação acadêmica"
+          },
+          {
+            "nome": "Número de Páginas",
+            "tipo": "REAL",
+            "descricao": "Número de páginas da publicação acadêmica"
+          }
+        ]
+      },
+      "valorPorAtributo": {
+        "Número de Páginas": {
+          "real": 537.0,
+          "logico": false,
+          "string": null
+        },
+        "Título": {
+          "real": 0.0,
+          "logico": false,
+          "string": "Um título qualquer para uma publicação acadêmica"
+        },
+        "Autor": {
+          "real": 0.0,
+          "logico": false,
+          "string": "Thiago Durante Pires"
+        }
+      }
+    },
+    {
+      "tipo": {
+        "codigo": "RAO",
+        "nome": "RELATÓRIO DE ATIVIDADES DE ORIENTAÇÃO",
+        "descricao": "Descreve todas as atividades de orientação exercidas por um docente em um dado período",
+        "atributos": [
+          {
+            "nome": "Atividade",
+            "tipo": "STRING",
+            "descricao": "Nome da atividade de orientação"
+          },
+          {
+            "nome": "Carga Horária",
+            "tipo": "REAL",
+            "descricao": "Carga horária da atividade de orientação"
+          }
+        ]
+      },
+      "valorPorAtributo": {
+        "Carga Horária": {
+          "real": 274.5,
+          "logico": false,
+          "string": null
+        },
+        "Atividade": {
+          "real": 0.0,
+          "logico": false,
+          "string": "Orientação de pós-doutorado do aluno Fulano de Tal"
+        }
+      }
+    }
+  ]
+}

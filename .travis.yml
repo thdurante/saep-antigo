@@ -1,0 +1,10 @@
+language: java
+
+install:
+  gradle assemble
+
+script:
+  gradle check
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t c0a17ade-b0f2-41e5-899d-1ae146db6fb3
