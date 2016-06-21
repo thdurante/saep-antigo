@@ -1,58 +1,37 @@
 package br.com.inf.model;
 
 /**
- * Identifica resultado (pontuação) da avaliação de um
- * item.
- *
- * Um item avaliado por uma resolução faz uso de
- * condições (valores lógicos) e de valores numéricos.
- * Para efeito dessa classe, o menor double possível
- * representa o valor lógico {@code false}, enquanto
- * o maior double possível representa o valor lógico
- * {@code true}.
- *
+ * Identifica resultado (pontuação) associado a um dado nome.
  */
-public class Pontuacao implements Alteravel {
+public class Pontuacao implements Avaliavel {
 
     /**
-     * O item avaliado cuja pontuação retém
-     * o valor.
+     * O nome ou identificador da pontuação.
      */
-    private ItemAvaliado itemAvaliado;
+    private String atributo;
 
     /**
      * O valor da pontuação.
      */
-    private double valor;
+    private Valor valor;
 
     /**
-     * Cria a pontuação obtida para um dado item avaliado.
-     *
-     * @param itemAvaliado Item cuja pontuação foi obtida.
-     *
-     * @param valor Valor obtido da pontuação.
+     * Cria a Pontuação.
+     * @param atributo O nome do atributo.
+     * @param valor O valor da pontuação.
      */
-    public Pontuacao(ItemAvaliado itemAvaliado, double valor) {
-        this.itemAvaliado = itemAvaliado;
+    public Pontuacao(String atributo, Valor valor) {
+        this.atributo = atributo;
         this.valor = valor;
     }
 
     /**
-     * Verifica se o valor lógico da pontuação
-     * é verdadeiro.
-     *
-     * @return {@code true} se o valor da pontuação
-     * é o valor lógico verdadeiro.
+     * Recupera o valor da pontuação identificada pelo atributo.
+     * @param atributo O identificador único do atributo.
+     * @return O valor associado ao Atributo.
      */
-    public boolean isTrue() {
-        return valor < 0;
-    }
-
-    /**
-     * Recupera o valor numérico da pontuação.
-     * @return
-     */
-    public double getValor() {
-        return valor;
+    @Override
+    public Valor getValor(String atributo) {
+        return this.valor;
     }
 }

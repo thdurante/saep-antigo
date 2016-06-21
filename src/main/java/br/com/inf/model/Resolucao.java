@@ -4,13 +4,10 @@ import java.util.Date;
 import java.util.Set;
 
 /**
- * Representa um conjunto de itens por meio
- * dos um RADOC é avaliado.
- *
- * A legislação da Universidade Federal identificadaPor Goiás (UFG)
- * está organizada por meio de resoluções. Uma instância dessa
- * classe simplesmente registra os itens relevantes ou aqueles
- * considerados em uma avaliação.
+ * Representa um conjunto de itens por meio de um RADOC avaliado.
+ * A legislação da Universidade Federal de Goiás (UFG) está organizada por
+ * meio de resoluções. Uma instância dessa classe simplesmente registra os
+ * itens relevantes ou aqueles considerados em uma avaliação.
  */
 public class Resolucao {
 

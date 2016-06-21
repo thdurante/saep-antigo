@@ -1,14 +1,16 @@
 package br.com.inf.model;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
- * Resultado da avaliação de um RADOC.
+ * Resultado da avaliação de um processo de progressão,
+ * promoção ou estágio probatório.
  *
- * Inclui o relatório sobre o qual o parecer é
- * emitido, juntamente com as eventuais alterações,
- * tanto dos relatos quanto de pontuações produzidas
- * pelo SAEP.
+ * <p>Um parecer envolve pelo menos um RADOC. Convém
+ * ressaltar que no caso de estágio probatório, por
+ * exemplo, vários RADOCs são empregados.
+ *
  */
 public class Parecer {
 
@@ -18,24 +20,24 @@ public class Parecer {
     private String guid;
 
     /**
-     * Resolução com base na qual o parecer
-     * é realizado.
+     * Resolução com base na qual o parecer é realizado.
      */
     private Resolucao resolucao;
 
     /**
-     * Lista de relatórios com base nos quais
-     * o parecer é realizado. Em muitos casos
-     * um único relatório é utilizado.
+     * Lista de relatórios com base nos quais o parecer é realizado.
+     * Em muitos casos um único relatório é utilizado.
      */
     private List<Radoc> radocs;
 
     /**
-     * As pontuações obtidas pelo parecer.
-     * Inclui aquelas pontuações que alteram
-     * outras.
+     * As pontuações obtidas pelo parecer. Inclui aquelas pontuações que alteram outras.
      */
     private Resultado resultado;
     private String descricao;
     private List<Alteracao> alteracoes;
+
+    public Parecer() {
+        this.guid = UUID.randomUUID().toString();
+    }
 }

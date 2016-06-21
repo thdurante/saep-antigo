@@ -1,22 +1,35 @@
 package br.com.inf.model;
 
 /**
- * Encapsula uma alteração no RADOC (Relato) ou
- * em valor produzido pelo SAEP (Pontuacao).
- *
- * O elemento original não é alterado. Em vez
- * disso, uma referência é mantida, assim como
- * a referência para o item que substitui o
- * original.
+ * Encapsula uma alteração em um relato ou em pontuação produzida pelo SAEP.
+ * O elemento original não é alterado, mas uma cópia do mesmo.
  */
 public class Alteracao {
-    private Alteravel antigo;
-    private Alteravel novo;
+
+    /**
+     * Referência do objeto original.
+     */
+    private Avaliavel original;
+
+    /**
+     * Referência do novo objeto gerado com a alteração.
+     */
+    private Avaliavel novo;
+
+    /**
+     * Justificativa da alteração.
+     */
     private String justificativa;
 
-    public Alteracao(Alteravel origem, Alteravel destino, String justificativa) {
-        this.antigo = origem;
-        this.novo = origem;
+    /**
+     * Cria uma Alteração.
+     * @param original Referência para o objeto original.
+     * @param novo Referência para o novo objeto gerado com a alteração.
+     * @param justificativa Justificativa da alteração.
+     */
+    public Alteracao(Avaliavel original, Avaliavel novo, String justificativa) {
+        this.original = original;
+        this.novo = novo;
         this.justificativa = justificativa;
     }
 }

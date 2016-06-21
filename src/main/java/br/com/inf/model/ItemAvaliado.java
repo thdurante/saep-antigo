@@ -1,12 +1,12 @@
 package br.com.inf.model;
 
 /**
- * Representa item avaliado por uma resolução.
- * Qualquer elemento que direta ou indiretamente
- * produz um valor considerado por uma
- * resolução é representado por uma instância
- * dessa classe.
+ * Representa um item avaliado por uma resolução.
+ * Ou seja, qualquer elemento que direta ou indiretamente
+ * produz um valor considerado por uma resolução.
  *
+ * <p>Uma resolução é definida por meio do conjunto de itens
+ * por ela avaliados.
  */
 public class ItemAvaliado {
 
@@ -22,65 +22,60 @@ public class ItemAvaliado {
     private String descricao;
 
     /**
-     * Atributo por meio do qual o item
-     * avaliado pode ter o seu valor
-     * recuperado. Observe que não inclui
-     * o valor propriamente dito, mas o
+     * Retém o tipo avaliado, se for o caso. Convém ressaltar que
+     * nem toda avaliação é sobre um conjunto de relatos de determinado
+     * tipo. Quando não for, o valor dessa propriedade é irrelevante.
+     */
+    private String tipo;
+
+    /**
+     * Atributo por meio do qual o item avaliado pode ter o seu valor
+     * recuperado. Observe que não inclui o valor propriamente dito, mas o
      * identificador do resultado.
      */
-    private Atributo resultado;
+    private String resultado;
 
     /**
-     * Um item avaliado é identificado por um Tipo
-     * ou por um Grupo, ou seja, um conjunto
-     * de Tipos
+     * Cria um item que pode ser avaliado.
+     * @param regra Regra empregada na avaliação do Item.
+     * @param descricao Descrição do Item.
+     * @param resultado Código único do resultado (nome).
      */
-    private Tipo tipo;
+    public ItemAvaliado(Regra regra, String descricao, String resultado) {
+        this.regra = regra;
+        this.descricao = descricao;
+        this.resultado = resultado;
+    }
 
     /**
-     * Um item avaliado é identificado por um Tipo
-     * ou por um Grupo, ou seja, um conjunto
-     * de Tipos
-     */
-    private Grupo grupo;
-
-    /**
-     * Recupera a regra identificadaPor avaliação do item.
-     *
-     * @return Regra que avalia o item.
+     * Recupera a Regra pela qual o item é avaliado.
+     * @return A Regra pela qual o item é avaliado.
      */
     public Regra getRegra() {
         return regra;
     }
 
     /**
-     * Recupera a descrição do item.
-     *
-     * @return Sequência que descreve o item.
+     * Recupera a Descrição do Item Avaliado.
+     * @return A Descrição do Item Avaliado.
      */
     public String getDescricao() {
         return descricao;
     }
 
     /**
-     * Recupera o resultado único associado ao item.
-     *
-     * @return Código único do item.
+     * Recupera o tipo do Item Avaliado.
+     * @return O tipo Item Avaliado.
      */
-    public Atributo getResultado() {
-        return resultado;
+    public String getTipo() {
+        return tipo;
     }
 
     /**
-     * Cria um item que pode ser avaliado.
-     *
-     * @param regra Regra empregado na avaliação do item.
-     * @param descricao Descrição do item.
-     * @param resultado Código único do resultado (nome).
+     * Recupera o identificador do resultado.
+     * @return O identificador do resultado.
      */
-    public ItemAvaliado(Regra regra, String descricao, Atributo resultado) {
-        this.regra = regra;
-        this.descricao = descricao;
-        this.resultado = resultado;
+    public String getResultado() {
+        return resultado;
     }
 }
