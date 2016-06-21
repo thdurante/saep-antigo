@@ -15,7 +15,7 @@ import org.junit.Test;
 import org.junit.rules.TestWatcher;
 import static junit.framework.TestCase.assertNotNull;
 
-public class DatabaseConnection {
+public class Database {
 
     MongoClient mongoClient;
 
