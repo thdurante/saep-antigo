@@ -11,8 +11,8 @@ Documentos disponíveis:
 * [Github: kyriosdata/saep](https://github.com/kyriosdata/saep) (Modelagem completa de domínio.)
 * [Estratégia de Persistência de Dados](https://docs.google.com/document/d/1AACGhLQ1V9A6vPrZuIQDxn9rsZQEYOT2Yi1ORHx6IE4/edit?usp=sharing)
 
-[build-badge]: https://travis-ci.com/thdurante/saep.svg?token=vXLpgias2ygiGmTRzctb&branch=serializando_objetos_modelo
+[build-badge]: https://travis-ci.com/thdurante/saep.svg?token=vXLpgias2ygiGmTRzctb&branch=master
 [build]: https://travis-ci.com/thdurante/saep
 
-[code-cov]: https://codecov.io/gh/thdurante/saep/branch/serializando_objetos_modelo/graph/badge.svg?token=SslMW2osOR
+[code-cov]: https://codecov.io/gh/thdurante/saep/branch/master/graph/badge.svg?token=SslMW2osOR
 [coverage]: https://codecov.io/gh/thdurante/saep
