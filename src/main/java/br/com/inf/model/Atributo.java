@@ -1,11 +1,10 @@
-/*
- * Copyright (c) 2016. Fábrica de Software - Instituto de Informática (UFG)
- * Creative Commons Attribution 4.0 International License.
- */
-
 package br.com.inf.model;
 
 /**
+ * Um atributo permite identificar cada um
+ * dos possíveis valores que podem ser empregados
+ * na descrição de um relato e/ou em uma expressão.
+ *
  * Um atributo define um nome e um tipo que
  * define o conjunto de valores que uma
  * "variável" com esse nome pode assumir.
@@ -15,52 +14,61 @@ package br.com.inf.model;
  */
 public class Atributo {
 
+    public static final int LOGICO = 0;
+    public static final int REAL = 1;
+    public static final int STRING = 2;
+
     /**
-     * O nome do atributo, por exemplo,
-     * "cha" ou "nome".
+     * O nome do atributo, por exemplo, "cha" ou "nome".
      */
     private String nome;
 
     /**
-     * A identificação do conjunto de valores
-     * associado ao atributo. Por exemplo,
-     * um atributo "inteiro" significa que
-     * apenas valores inteiros podem ser
-     * assumidos pelo atributo em questão.
+     * A identificação do conjunto de valores associado ao atributo.
+     * Por exemplo, um atributo "real" significa que apenas valores
+     * reais (numéricos) podem ser assumidos pelo atributo em questão.
      */
-    private TipoPrimitivo tipo;
+    private int tipo;
 
     /**
-     * Informação adicional que detalha o uso
-     * esperado do tipo (informação de ajuda).
-     * Por exemplo, para o Atributo "nome", pode
-     * ser algo como "nome completo do periódico,
-     * por exemplo, International Journal of Health
-     * Informatics.".
+     * Informação adicional que detalha o uso esperado do tipo (informação de ajuda).
+     * Por exemplo, para o Atributo "nome", pode ser algo como "nome completo do periódico".
      */
     private String descricao;
 
-    public Atributo(String nome, String descricao, TipoPrimitivo tipo) {
+    /**
+     * Cria um atributo dado um nome, uma descrição e um tipo.
+     * @param nome O nome dado ao atributo.
+     * @param descricao A descrição ou informação de ajuda do atributo.
+     * @param tipo O tipo de valores associados ao atributo.
+     */
+    public Atributo(String nome, String descricao, int tipo) {
         this.nome = nome;
         this.descricao = descricao;
         this.tipo = tipo;
     }
 
     /**
-     * Recupera o nome do atributo.
-     *
-     * @return O identificador único do atributo.
+     * Recupera o nome do Atributo.
+     * @return O nome do Atributo.
      */
     public String getNome() {
         return nome;
     }
 
     /**
-     * Recupera o tipo primitivo do atributo.
-     *
-     * @return O tipo do atributo.
+     * Recupera a descrição (ou informação de ajuda) do Atributo.
+     * @return A descrição do Atributo.
      */
-    public TipoPrimitivo getTipo() {
+    public String getDescricao() {
+        return descricao;
+    }
+
+    /**
+     * Recupera o tipo do Atributo.
+     * @return O tipo do Atributo.
+     */
+    public int getTipo() {
         return tipo;
     }
 }

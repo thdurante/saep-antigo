@@ -1,64 +1,70 @@
-/*
- * Copyright (c) 2016. Fábrica de Software - Instituto de Informática (UFG)
- * Creative Commons Attribution 4.0 International License.
- */
-
 package br.com.inf.model;
 
 import java.util.Date;
 import java.util.List;
 
 /**
- * Relatório contendo relatos associados a um docente.
+ * Conjunto de relatos associados a um docente em um dado ano base.
+ * <p>Eventualmente um mesmo docente, em um dado ano, pode possuir
+ * mais de um RADOC, decorrente, por exemplo, da correação de alguma
+ * informação.
  */
 public class Radoc {
 
     /**
-     * Identificador único do relatório.
+     * Identificador único do Radoc.
      */
     private String guid;
 
     /**
-     * Ano base do relatório.
+     * Ano base do Radoc.
      */
     private int anoBase;
 
+    /**
+     * Lista de relatos que compõem o Radoc.
+     */
     private List<Relato> relatos;
 
     /**
-     * Cria um relatório identificadaPor relatos.
-     *
-     * @param relatos Conjunto identificadaPor relatos que fazem parte
-     *                do relatório.
+     * Cria um relatório à partir de um dado conjunto de Relatos.
+     * @param relatos Conjunto de Relatos que fazem parte do Radoc.
      */
     public Radoc(List<Relato> relatos) {
         if (relatos == null) {
             throw new IllegalArgumentException("relatos");
         }
-
         this.relatos = relatos;
     }
 
-    /*
-    * Getters and setters
-    */
-
-    public void setGuid(String guid) {
-        this.guid = guid;
-    }
-
+    /**
+     * Atribui ao Radoc um determinado ano base.
+     * @param anoBase O ano base do Radoc.
+     */
     public void setAnoBase(int anoBase) {
         this.anoBase = anoBase;
     }
 
+    /**
+     * Recupera o identificador único do Radoc.
+     * @return O identificador do Radoc.
+     */
     public String getGuid() {
         return guid;
     }
 
+    /**
+     * Recupera o ano base do Radoc.
+     * @return O ano base do Radoc.
+     */
     public int getAnoBase() {
         return anoBase;
     }
 
+    /**
+     * Recupera a lista que Relatos que compõem o Radoc.
+     * @return A list de Relatos que compõem o Radoc.
+     */
     public List<Relato> getRelatos() {
         return relatos;
     }
