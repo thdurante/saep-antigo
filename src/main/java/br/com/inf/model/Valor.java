@@ -24,7 +24,7 @@ public class Valor {
     /**
      * Container para o valor numérico da instância.
      */
-    private float real;
+    private double real;
 
     /**
      * Container para o valor lógico da instância.
@@ -40,7 +40,7 @@ public class Valor {
      * Cria uma instância cujo valor é um número real.
      * @param real Número real correspondente ao valor.
      */
-    public Valor(float real) {
+    public Valor(double real) {
         this.real = real;
     }
 
@@ -64,7 +64,7 @@ public class Valor {
      * Recupera o valor real (numérico) armazenado na instância.
      * @return O valor real (numérico) correspondente à instância.
      */
-    public float getReal() {
+    public double getReal() {
         return real;
     }
 

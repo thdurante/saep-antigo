@@ -14,10 +14,6 @@ package br.com.inf.model;
  */
 public class Atributo {
 
-    public static final int LOGICO = 0;
-    public static final int REAL = 1;
-    public static final int STRING = 2;
-
     /**
      * O nome do atributo, por exemplo, "cha" ou "nome".
      */
@@ -28,7 +24,7 @@ public class Atributo {
      * Por exemplo, um atributo "real" significa que apenas valores
      * reais (numéricos) podem ser assumidos pelo atributo em questão.
      */
-    private int tipo;
+    private TipoPrimitivo tipo;
 
     /**
      * Informação adicional que detalha o uso esperado do tipo (informação de ajuda).
@@ -42,7 +38,7 @@ public class Atributo {
      * @param descricao A descrição ou informação de ajuda do atributo.
      * @param tipo O tipo de valores associados ao atributo.
      */
-    public Atributo(String nome, String descricao, int tipo) {
+    public Atributo(String nome, String descricao, TipoPrimitivo tipo) {
         this.nome = nome;
         this.descricao = descricao;
         this.tipo = tipo;
@@ -68,7 +64,7 @@ public class Atributo {
      * Recupera o tipo do Atributo.
      * @return O tipo do Atributo.
      */
-    public int getTipo() {
+    public TipoPrimitivo getTipo() {
         return tipo;
     }
 }

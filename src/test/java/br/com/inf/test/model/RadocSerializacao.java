@@ -44,15 +44,13 @@ public class RadocSerializacao {
         Radoc radoc;
 
         // RADOC - ATRIBUTOS
-        String guid = "6295e9d6-5ba8-41de-b231-7f96c1b3abde";
-        int anoBase = 2012;
+        int anoBase = 2016;
         List<Relato> relatos = new ArrayList<>();
 
         relatos.add(createRelato1());
         relatos.add(createRelato2());
 
         radoc = new Radoc(relatos);
-        radoc.setGuid(guid);
         radoc.setAnoBase(anoBase);
 
         return radoc;
@@ -63,9 +61,10 @@ public class RadocSerializacao {
 
         // RELATO - ATRIBUTOS
         Tipo tipoDoRelato;
-        List<Valor> valoresDoRelato = new ArrayList<>();
-        Set<Atributo> atributosDoRelato = new HashSet<>();
+        Map<String, Valor> valoresDoRelato = new HashMap<>();
 
+        // TIPO
+        Set<Atributo> atributosDoRelato = new HashSet<>();
         atributosDoRelato.add(new Atributo(
                 "Título",
                 "Título da publicação acadêmica",
@@ -82,31 +81,6 @@ public class RadocSerializacao {
                 TipoPrimitivo.REAL
         ));
 
-        valoresDoRelato.add(new Valor(
-                new Atributo(
-                        "Título",
-                        "Título da publicação acadêmica",
-                        TipoPrimitivo.STRING
-                ),
-                "PUBLICAÇÃO ACADÊMICA NÚMERO UM. TREINAMENTO EM RAILS AVANÇADO"
-        ));
-        valoresDoRelato.add(new Valor(
-                new Atributo(
-                        "Autor",
-                        "Autor da publicação acadêmica",
-                        TipoPrimitivo.STRING
-                ),
-                "Thiago Durante Pires"
-        ));
-        valoresDoRelato.add(new Valor(
-                new Atributo(
-                        "Número de Páginas",
-                        "Número de páginas da publicação acadêmica",
-                        TipoPrimitivo.REAL
-                ),
-                674
-        ));
-
         tipoDoRelato = new Tipo(
                 "RELATÓRIO DE PUBLICAÇÕES ACADÊMICAS",
                 "RPA",
@@ -114,6 +88,19 @@ public class RadocSerializacao {
                 atributosDoRelato
         );
 
+        // VALORES
+        valoresDoRelato.put(
+                "Título",
+                new Valor("Um título qualquer para uma publicação acadêmica")
+        );
+        valoresDoRelato.put(
+                "Autor",
+                new Valor("Thiago Durante Pires")
+        );
+        valoresDoRelato.put(
+                "Número de Páginas",
+                new Valor(537)
+        );
 
         // CRIAÇÃO DO RELATO, DE FATO
         relato = new Relato(tipoDoRelato, valoresDoRelato);
@@ -125,9 +112,10 @@ public class RadocSerializacao {
 
         // RELATO - ATRIBUTOS
         Tipo tipoDoRelato;
-        List<Valor> valoresDoRelato = new ArrayList<>();
-        Set<Atributo> atributosDoRelato = new HashSet<>();
+        Map<String, Valor> valoresDoRelato = new HashMap<>();
 
+        // TIPO
+        Set<Atributo> atributosDoRelato = new HashSet<>();
         atributosDoRelato.add(new Atributo(
                 "Atividade",
                 "Nome da atividade de orientação",
@@ -139,23 +127,6 @@ public class RadocSerializacao {
                 TipoPrimitivo.REAL
         ));
 
-        valoresDoRelato.add(new Valor(
-                new Atributo(
-                        "Atividade",
-                        "Nome da atividade de orientação",
-                        TipoPrimitivo.STRING
-                ),
-                "ORIENTAÇÃO DE PÓS-DOUTORADO DO ALUNO FULANO DE TAL"
-        ));
-        valoresDoRelato.add(new Valor(
-                new Atributo(
-                        "Carga Horária",
-                        "Carga horária da atividade de orientação",
-                        TipoPrimitivo.REAL
-                ),
-                274.5
-        ));
-
         tipoDoRelato = new Tipo(
                 "RELATÓRIO DE ATIVIDADES DE ORIENTAÇÃO",
                 "RAO",
@@ -163,6 +134,15 @@ public class RadocSerializacao {
                 atributosDoRelato
         );
 
+        // VALORES
+        valoresDoRelato.put(
+                "Atividade",
+                new Valor("Orientação de pós-doutorado do aluno Fulano de Tal")
+        );
+        valoresDoRelato.put(
+                "Carga Horária",
+                new Valor(274.5)
+        );
 
         // CRIAÇÃO DO RELATO, DE FATO
         relato = new Relato(tipoDoRelato, valoresDoRelato);
@@ -200,7 +180,7 @@ public class RadocSerializacao {
         Radoc recoveredRadoc = gson.fromJson(reader, Radoc.class);
 
         assertNotNull("should not be null", recoveredRadoc);
-        assertEquals("radoc.guid should match", "guid", recoveredRadoc.getGuid());
-        assertEquals("radoc.anoBase should match", 2012, recoveredRadoc.getAnoBase());
+        assertEquals("radoc.guid should match", "c3223d17-135f-473e-b01f-2f37705d3945", recoveredRadoc.getGuid());
+        assertEquals("radoc.anoBase should match", 2016, recoveredRadoc.getAnoBase());
     }
 }

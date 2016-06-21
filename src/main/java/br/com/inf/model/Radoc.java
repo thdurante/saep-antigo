@@ -1,7 +1,7 @@
 package br.com.inf.model;
 
-import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Conjunto de relatos associados a um docente em um dado ano base.
@@ -35,6 +35,7 @@ public class Radoc {
             throw new IllegalArgumentException("relatos");
         }
         this.relatos = relatos;
+        this.guid = UUID.randomUUID().toString();
     }
 
     /**
