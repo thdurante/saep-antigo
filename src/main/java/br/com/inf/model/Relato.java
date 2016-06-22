@@ -16,7 +16,7 @@ import java.util.Map;
 public class Relato implements Avaliavel {
 
     /**
-     * O Tipo do relato.
+     * O tipo do relato.
      */
     private Tipo tipo;
 
@@ -27,8 +27,8 @@ public class Relato implements Avaliavel {
     private Map<String, Valor> valorPorAtributo;
 
     /**
-     * Cria um relato à partir do Tipo e Valores fornecidos.
-     * @param tipo O Tipo do relato.
+     * Cria um relato à partir do tipo e Valores fornecidos.
+     * @param tipo O tipo do relato.
      * @param valorPorAtributo Conjunto de valores para cada um dos Atributos do Relato.
      */
     public Relato(Tipo tipo, Map<String, Valor> valorPorAtributo) {
@@ -47,8 +47,8 @@ public class Relato implements Avaliavel {
     }
 
     /**
-     * Recupera o Tipo do Relato.
-     * @return O Tipo do Relato.
+     * Recupera o tipo do Relato.
+     * @return O tipo do Relato.
      */
     public Tipo getTipo() {
         return tipo;

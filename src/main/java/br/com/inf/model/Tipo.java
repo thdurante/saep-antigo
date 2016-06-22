@@ -1,5 +1,9 @@
 package br.com.inf.model;
 
+import br.com.inf.model.mock.strategies.DescricaoMockStrategy;
+import uk.co.jemos.podam.common.PodamCollection;
+import uk.co.jemos.podam.common.PodamStrategyValue;
+
 import java.util.Set;
 
 /**
@@ -41,19 +45,21 @@ public class Tipo {
      * Por exemplo, "disciplina ministrada na graduação,
      * apenas na modalidade presencial".
      */
+    @PodamStrategyValue(DescricaoMockStrategy.class)
     private String descricao;
 
     /**
-     * Conjunto de atributos que caracteriza um Tipo.
+     * Conjunto de atributos que caracteriza um tipo.
      */
+    @PodamCollection(nbrElements = 3)
     private Set<Atributo> atributos;
 
     /**
-     * Cria um Tipo através de um nome, código, descrição e atributos definidos.
-     * @param nome O nome pelo qual o Tipo é conhecido.
-     * @param codigo Código único que identifica o Tipo.
-     * @param descricao Informação adicional sobre o Tipo.
-     * @param atributos Atributos que caracterizam o Tipo.
+     * Cria um tipo através de um nome, código, descrição e atributos definidos.
+     * @param nome O nome pelo qual o tipo é conhecido.
+     * @param codigo Código único que identifica o tipo.
+     * @param descricao Informação adicional sobre o tipo.
+     * @param atributos Atributos que caracterizam o tipo.
      */
     public Tipo(String nome, String codigo, String descricao, Set<Atributo> atributos) {
         this.nome = nome;
@@ -63,32 +69,32 @@ public class Tipo {
     }
 
     /**
-     * Recupera o nome pelo qual o Tipo é conhecido.
-     * @return O nome do Tipo.
+     * Recupera o nome pelo qual o tipo é conhecido.
+     * @return O nome do tipo.
      */
     public String getNome() {
         return nome;
     }
 
     /**
-     * Recupera a descrição do Tipo.
-     * @return Descrição ou informação adicional sobre o Tipo.
+     * Recupera a descrição do tipo.
+     * @return Descrição ou informação adicional sobre o tipo.
      */
     public String getDescricao() {
         return descricao;
     }
 
     /**
-     * Recupera o código único do Tipo.
-     * @return Identificador único do Tipo.
+     * Recupera o código único do tipo.
+     * @return Identificador único do tipo.
      */
     public String getCodigo() {
         return codigo;
     }
 
     /**
-     * Recupera conjunto de atributos que caracterizam o Tipo.
-     * @return O conjunto de atributos que define o Tipo.
+     * Recupera conjunto de atributos que caracterizam o tipo.
+     * @return O conjunto de atributos que define o tipo.
      */
     public Set<Atributo> getAtributos() {
         return atributos;

@@ -13,6 +13,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile "org.mockito:mockito-core:1.+"
+    testCompile group: 'com.github.javafaker', name: 'javafaker', version: '0.10'
     compile 'com.github.kyriosdata:saep:master'
     compile group: 'com.google.code.gson', name: 'gson', version: '2.6.2'
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
@@ -22,6 +23,7 @@ dependencies {
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.6'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.6'
     compile 'org.mongodb:mongo-java-driver:3.2.2'
+    compile 'uk.co.jemos.podam:podam:6.0.2.RELEASE'
 }
 
 jacocoTestReport {

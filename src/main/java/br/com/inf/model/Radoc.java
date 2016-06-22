@@ -1,5 +1,11 @@
 package br.com.inf.model;
 
+import br.com.inf.model.mock.strategies.AnoMockStrategy;
+import br.com.inf.model.mock.strategies.GuidMockStrategy;
+import com.google.gson.annotations.SerializedName;
+import uk.co.jemos.podam.common.PodamCollection;
+import uk.co.jemos.podam.common.PodamStrategyValue;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -14,16 +20,20 @@ public class Radoc {
     /**
      * Identificador único do Radoc.
      */
+    @PodamStrategyValue(GuidMockStrategy.class)
+    @SerializedName("_id")
     private String guid;
 
     /**
      * Ano base do Radoc.
      */
+    @PodamStrategyValue(AnoMockStrategy.class)
     private int anoBase;
 
     /**
      * Lista de relatos que compõem o Radoc.
      */
+    @PodamCollection(nbrElements = 2)
     private List<Relato> relatos;
 
     /**
