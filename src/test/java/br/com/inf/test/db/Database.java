@@ -1,6 +1,5 @@
 package br.com.inf.test.db;
 
-import br.com.inf.test.model.RadocSerializacao;
 import br.com.inf.test.utils.Log4jTestWatcher;
 import com.mongodb.Block;
 import com.mongodb.MongoClient;
@@ -50,7 +49,7 @@ public class Database {
      */
 
     @Rule
-    public TestWatcher watchman = new Log4jTestWatcher(RadocSerializacao.class);
+    public TestWatcher watchman = new Log4jTestWatcher(Database.class);
 
     @Before
     public void setUp() {

@@ -13,14 +13,14 @@ import uk.co.jemos.podam.api.PodamFactoryImpl;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Classe de Teste para o repositório de Radocs.
+ * Classe de Teste para o Repositório de Radocs.
  */
 public class RadocRepositorioTest {
 
     RadocRepositorio radocRepositorio;
 
     @Rule
-    public TestWatcher watchman = new Log4jTestWatcher(RadocSerializacao.class);
+    public TestWatcher watchman = new Log4jTestWatcher(RadocRepositorio.class);
 
     @Before
     public void setUp() {

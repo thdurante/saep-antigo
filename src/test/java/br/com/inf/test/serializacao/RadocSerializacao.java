@@ -1,4 +1,4 @@
-package br.com.inf.test.model;
+package br.com.inf.test.serializacao;
 
 import br.com.inf.model.Atributo;
 import br.com.inf.model.Radoc;
