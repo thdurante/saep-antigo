@@ -1,4 +1,5 @@
 br.com.inf.model
+br.com.inf.model.mock.strategies
 br.com.inf.test.db
 br.com.inf.test.model
 br.com.inf.test.utils
