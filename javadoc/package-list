@@ -1,5 +1,7 @@
-br.com.inf.model
-br.com.inf.model.mock.strategies
-br.com.inf.test.db
-br.com.inf.test.model
-br.com.inf.test.utils
+br.com.inf.general
+br.com.inf.persistencia.interfaces
+br.com.inf.persistencia.manager
+br.com.inf.persistencia.mockStrategies
+br.com.inf.persistencia.model
+br.com.inf.persistencia.repositorios
+br.com.inf.utils
