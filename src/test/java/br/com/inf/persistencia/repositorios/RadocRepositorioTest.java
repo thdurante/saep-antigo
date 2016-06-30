@@ -35,9 +35,9 @@ public class RadocRepositorioTest {
 
     @Test
     public void recuperaRadoc() {
-        Radoc radoc = radocRepositorio.recupera("fb47148b-6cce-48f1-bcab-4e235bec0db5");
+        Radoc radoc = radocRepositorio.recupera("50bcfb24-d661-4cd5-85d7-4ff4b1b43399");
 
-        assertEquals("radoc.anoBase should match", 2001, radoc.getAnoBase());
+        assertEquals("radoc.anoBase should match", 2012, radoc.getAnoBase());
         assertEquals("radoc.relatos.size should match", 5, radoc.getRelatos().size());
     }
 
