@@ -53,7 +53,7 @@
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.7.5" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.7.5" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.github.kyriosdata:saep:master-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: com.github.kyriosdata.saep:saep-dominio:master-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.kyriosdata:saep:-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.kyriosdata.saep:saep-dominio:-SNAPSHOT" level="project" />
   </component>
 </module>

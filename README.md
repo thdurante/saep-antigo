@@ -1,7 +1,7 @@
 # SAEP
 Sistema de Apoio à Elaboração de Parecer (SAEP) é um sistema desenvolvido como parte de disciplinas do curso de Engenharia de Software do Instituto de Informática (UFG). 
 
-[![CircleCI][build-badge-1]][build-1] [![Travis][build-badge]][build] [![codecov][code-cov]][coverage] [![](https://jitpack.io/v/kyriosdata/saep.svg)](https://jitpack.io/#kyriosdata/saep)
+[![CircleCI][build-badge-1]][build-1] [![Travis][build-badge]][build] [![](https://jitpack.io/v/kyriosdata/saep.svg)](https://jitpack.io/#kyriosdata/saep)
 
 
 Documentos disponíveis:
@@ -16,6 +16,3 @@ Documentos disponíveis:
 
 [build-badge-1]: https://circleci.com/gh/thdurante/saep.svg?style=svg&circle-token=bc8dbea7d77d42aadcc86754ae144c9b45ce3f8c
 [build-1]: https://circleci.com/gh/thdurante/saep
-
-[code-cov]: https://codecov.io/gh/thdurante/saep/branch/master/graph/badge.svg?token=SslMW2osOR
-[coverage]: https://codecov.io/gh/thdurante/saep
